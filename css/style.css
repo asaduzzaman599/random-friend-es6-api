@@ -1,0 +1,14 @@
+main{
+    height: 100vh;
+}
+
+.contact {
+    font-size: 25px;
+}
+ul{
+    list-style: none;;
+}
+
+ul li:hover{
+    color:white;
+}
