@@ -9,6 +9,6 @@ ul{
     list-style: none;;
 }
 
-ul li:hover{
+ul li:hover,.active{
     color:white;
 }

@@ -1,4 +1,7 @@
+let userInfo;
 const loadUser = async () => {
+
+    document.getElementById('spinner').classList.remove('d-none');
     const url = `https://randomuser.me/api/1.3/`;
     try {
 
@@ -14,20 +17,56 @@ const loadUser = async () => {
 loadUser();
 
 const displayUserInfo = (user)=>{
+    
+    document.getElementById('spinner').classList.add('d-none');
+    userInfo=user;
     const userInfoContainer = document.getElementById('user-info');
     const {title,first,last} = user.name
     document.getElementById('user-img').src = `${user.picture.large}`;
-    userInfoContainer.innerHTML=` <h2 class="text-center">Hi! I am ${title} ${first} ${last}</h2>`;
+    userInfoContainer.innerHTML=` <h2 class="text-center text-primary">Hi! I am <span class="text-light">${title} ${first} ${last}</span></h2>`;
     console.log(userInfoContainer.innerHTML);
     console.log(user);
 }
 
 const displayInfo = input =>{
+    const userPersonalinfo = document.getElementById("personal-info");
+    const li =document.querySelectorAll('li');
+    console.log(li[0])
     if(input ==="email"){
+        li[0].classList.add('active');
+        li[1].classList.remove('active');
+        li[2].classList.remove('active');
+        userPersonalinfo.innerHTML =`
+        
+        <h3 class="text-center ">Email Me: ${userInfo.email}</h3>
+        `
         console.log('email')
     }else if(input ==="phone"){
-        console.log('email')
+        li[0].classList.remove('active');
+        li[1].classList.add('active');
+        li[2].classList.remove('active');
+        userPersonalinfo.innerHTML =`
+        
+        <h3 class="text-center">Phone Number: ${userInfo.phone}</h3>
+        `
     }else{
-        console.log('location')
+        li[0].classList.remove('active');
+        li[1].classList.remove('active');
+        li[2].classList.add('active');
+        console.log(userInfo.location.street.number)
+        userPersonalinfo.innerHTML =`
+        
+        <h3 class="text-center pb-3">Location: ${userInfo.location.street.number}, ${userInfo.location.street.name}, ${userInfo.location.city}, ${userInfo.location.country}</h3>
+        `
     }
+    
+}
+
+const anotherUser = () =>{
+    document.getElementById("personal-info").textContent='';
+    const li =document.querySelectorAll('li');
+    li[0].classList.remove('active');
+    li[1].classList.remove('active');
+    li[2].classList.remove('active');
+    loadUser();
 }

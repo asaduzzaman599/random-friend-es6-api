@@ -32,22 +32,22 @@
         </div>
     </div>
     <main class=" d-flex align-items-center justify-content-center">
-        <div class="w-50 mx-auto h-75 bg-info rounded d-flex flex-column p-5 border">
+        <div class="w-50 mx-auto h-75 bg-secondary rounded d-flex flex-column p-5 border">
             <div class="flex-grow-1  mx-auto">
                 <img id="user-img" class="rounded-circle border border-3 border-light"  src="" alt="">
             </div>
-            <div class="flex-grow-1">
+            <div class="flex-grow-1 mt-3">
 
-                <div id="user-info" class=" bg-success">
+                <div id="user-info" class=" bg-dark py-2">
                 
                 </div>
-                <ul class=" d-flex justify-content-around contact">
+                <ul class=" d-flex justify-content-around contact mt-3">
                     <li onclick="displayInfo('email')"><i class="fa-solid fa-envelope"></i></li>
                     <li onclick="displayInfo('phone')"><i class="fa-solid fa-phone"></i></li>
                     <li onclick="displayInfo('location')"><i class="fa-solid fa-location-dot"></i></li>
+                    <li onclick="anotherUser()" class="text-danger"><i class="fa-solid fa-rotate-right"></i></li>
                 </ul>
                 <div id="personal-info" > 
-                    <h3 class="text-center"></h3>
                 </div>
             </div>
         </div>
