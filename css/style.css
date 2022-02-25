@@ -1,6 +1,9 @@
 main{
     height: 100vh;
 }
+.content{
+    width: 75%;
+}
 
 .contact {
     font-size: 25px;
@@ -11,4 +14,14 @@ ul{
 
 ul li:hover,.active{
     color:white;
+}
+.text-color{
+    color:white;
+}
+
+@media screen and (max-width:540px) {
+    .content{
+        width: 100%;
+    }
+    
 }

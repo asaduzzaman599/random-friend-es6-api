@@ -38,7 +38,7 @@ const displayInfo = input =>{
         li[2].classList.remove('active');
         userPersonalinfo.innerHTML =`
         
-        <h3 class="text-center ">Email Me: ${userInfo.email}</h3>
+        <h3 class="text-center pb-3 text-color">Email Me: ${userInfo.email}</h3>
         `
         console.log('email')
     }else if(input ==="phone"){
@@ -47,7 +47,7 @@ const displayInfo = input =>{
         li[2].classList.remove('active');
         userPersonalinfo.innerHTML =`
         
-        <h3 class="text-center">Phone Number: ${userInfo.phone}</h3>
+        <h3 class="text-center pb-3 text-color">Phone Number: ${userInfo.phone}</h3>
         `
     }else{
         li[0].classList.remove('active');
@@ -56,7 +56,7 @@ const displayInfo = input =>{
         console.log(userInfo.location.street.number)
         userPersonalinfo.innerHTML =`
         
-        <h3 class="text-center pb-3">Location: ${userInfo.location.street.number}, ${userInfo.location.street.name}, ${userInfo.location.city}, ${userInfo.location.country}</h3>
+        <h3 class="text-center pb-3 text-color">Location: ${userInfo.location.street.number}, ${userInfo.location.street.name}, ${userInfo.location.city}, ${userInfo.location.country}</h3>
         `
     }
     
