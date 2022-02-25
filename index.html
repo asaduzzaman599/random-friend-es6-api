@@ -21,41 +21,45 @@
 
 <body class="bg-dark">
 
-    <header class="header">
-
-
-    </header>
+    <!-- spinner  -->
     <div id="spinner" class="position-fixed opacity-50 spinner-content top-0  w-100 bg-light d-none">
 
         <div class="spinner spinner-grow text-dark position-fixed  top-50 start-50 " role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
+
+    <!-- main content  -->
     <main class=" d-flex align-items-center justify-content-center">
         <div class="content mx-auto h-75 bg-secondary rounded d-flex flex-column p-5 border">
+            <!-- image content  -->
             <div class="flex-grow-1  mx-auto">
-                <img id="user-img" class="rounded-circle border border-3 border-light"  src="" alt="">
+                <img id="user-img" class="rounded-circle border border-3 border-light" src="" alt="">
             </div>
+
+            <!-- information content  -->
             <div class="flex-grow-1 mt-3">
 
                 <div id="user-info" class=" bg-dark py-2">
-                
+                    <!-- name div  -->
                 </div>
+                <!-- contact information buttons  -->
                 <ul class=" d-flex justify-content-around contact mt-3">
                     <li onclick="displayInfo('email')"><i class="fa-solid fa-envelope"></i></li>
                     <li onclick="displayInfo('phone')"><i class="fa-solid fa-phone"></i></li>
                     <li onclick="displayInfo('location')"><i class="fa-solid fa-location-dot"></i></li>
                     <li onclick="anotherUser()" class="text-danger"><i class="fa-solid fa-rotate-right"></i></li>
                 </ul>
-                <div id="personal-info" > 
+                <div id="personal-info">
+                    <!-- personal info display here   -->
                 </div>
             </div>
         </div>
-
-
     </main>
+    
+    <!-- footer  -->
     <footer>
-
+        <p class="text-center text-light">copyright ©2020. All rights reserved asaduzzamansoumit@gmail.com.</p>
     </footer>
     <!-- bootstrap js  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
