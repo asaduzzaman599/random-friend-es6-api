@@ -61,7 +61,7 @@ const displayInfo = input =>{
         li[2].classList.remove('active');
         
         //display information
-        userPersonalinfo.innerHTML =`=
+        userPersonalinfo.innerHTML =`
         <h3 class="text-center pb-3 text-color">Phone Number: ${userInfo.phone}</h3>
         `
     }else{
